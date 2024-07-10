@@ -1,0 +1,56 @@
+# Query 1
+SELECT * 
+FROM `students` 
+WHERE YEAR(`date_of_birth`) = 1990;
+
+# Query 2
+SELECT * 
+FROM `courses` 
+WHERE `cfu` > 10;
+
+# Query 3
+SELECT * 
+FROM `students` 
+WHERE  YEAR(`date_of_birth`) < (YEAR(CURRENT_DATE()) - 30) ;
+
+# Query 4
+SELECT * 
+FROM `courses` 
+WHERE `period` LIKE 'I %'
+AND `year` = 1;
+
+# Query 5
+SELECT * 
+FROM `exams` 
+WHERE `hour` >= '14:00:00'
+AND `date` = '2020-06-20'
+
+# Query 6
+SELECT * 
+FROM `degrees` 
+WHERE `level` = 'magistrale';
+
+# Query 7
+SELECT `departments`.`name`
+FROM `departments`; 
+
+# Query 8
+SELECT * 
+FROM `teachers` 
+WHERE `teachers`.`phone` IS NULL;
+
+# Query 9
+INSERT INTO `students` (degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_number,email)
+VALUES (05,'Cristian','Nechifor','2001-02-05','CIJNEIBVEIOUJNV','2024-07-09','43973','vlad.cristian71@yahoo.it');
+
+# Query 10
+UPDATE `teachers`
+SET `office_number` = 126
+WHERE `teachers`.`id` = 58;
+
+# Query 11
+DELETE 
+FROM `students`
+WHERE `students`.`id` = 5001;
+
+
