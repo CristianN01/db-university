@@ -1,0 +1,19 @@
+#Query group by 1
+SELECT YEAR(`students`.`enrolment_date`) AS `anno`, COUNT(`id`)
+FROM `students` 
+GROUP BY `anno`, `students`.`id`;
+
+#Query group by 2
+SELECT COUNT(`teachers`.`id`) AS `numero_di_professori`, `teachers`.`office_address` AS `indirizzo`
+FROM `teachers` 
+GROUP BY `indirizzo`;
+
+#Query group by 3
+SELECT AVG(`exam_student`.`vote`) AS `media`, `exam_student`.`exam_id` AS `esami`
+FROM `exam_student` 
+GROUP BY `esami`;
+
+#Query group by 4
+SELECT COUNT(`degrees`.`id`) AS `corsi`,`degrees`.`department_id` AS `departments`
+FROM `degrees`
+GROUP BY `departments`;
